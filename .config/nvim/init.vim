@@ -26,6 +26,8 @@ Plug 'tpope/vim-vinegar'
 " to install the JavaScript language, use ':TSInstall javascript'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" theme
+Plug 'mhartington/oceanic-next'
 " Initialize plugin system
 call plug#end()
 
@@ -71,3 +73,8 @@ set bufhidden=hide
 " tools like prettier
 set nosmartindent
 set noautoindent
+
+" theme
+set termguicolors
+colorscheme OceanicNext
+set background=dark

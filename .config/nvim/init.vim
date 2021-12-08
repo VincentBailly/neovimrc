@@ -33,14 +33,14 @@ call plug#end()
 " Use tree sitter for syntax highlighting
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-	highlight = {
-		enable = true,
-		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-		-- Using this option may slow down your editor, and you may see some duplicate highlights.
-		-- Instead of true it can also be a list of languages
-		additional_vim_regex_highlighting = false,
-	},
+  highlight = {
+  enable = true,
+  -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+  -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+  -- Using this option may slow down your editor, and you may see some duplicate highlights.
+  -- Instead of true it can also be a list of languages
+  additional_vim_regex_highlighting = false,
+  },
 }
 EOF
 
@@ -59,3 +59,15 @@ set shiftwidth=2
 
 " insert a tab will instead insert spaces instead
 set expandtab
+
+" don't kill a buffer when we navigate away from it
+" This is useful to not loose the terminal buffer.
+" It is also useful to navigate from one file to another without the need to
+" save the former (useful to look up definitions of functions when coding)
+set bufhidden=hide
+
+" disabling smartindent and autoindent because they don't always do what I
+" expect. For formatting the code I prefere to rely on actual code formatting
+" tools like prettier
+set nosmartindent
+set noautoindent

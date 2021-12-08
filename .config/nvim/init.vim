@@ -52,3 +52,10 @@ require'nvim-treesitter.configs'.setup {
 	}
 }
 EOF
+
+
+" set the << and >> command to use 2 spaces for indentation
+set shiftwidth=2
+
+" insert a tab will instead insert spaces instead
+set expandtab

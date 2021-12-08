@@ -66,7 +66,7 @@ set expandtab
 " This is useful to not loose the terminal buffer.
 " It is also useful to navigate from one file to another without the need to
 " save the former (useful to look up definitions of functions when coding)
-set bufhidden=hide
+set hidden
 
 " disabling smartindent and autoindent because they don't always do what I
 " expect. For formatting the code I prefere to rely on actual code formatting

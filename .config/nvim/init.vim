@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
-" better integration with netwk
+" better integration with netrw
 " - press '-' to explore the directory of the current buffer
 " - press 'gh' to toggle hidden files hiding
 " - press '.' to start cmd mode prepopulated with the file name under the
@@ -9,6 +9,17 @@ call plug#begin(stdpath('data') . '/plugged')
 " - press 'y.' to yank the absolute path of the file under the cursor
 " - press '~' to go to HOME
 " - press 'CTRL-^' to jump back to previous buffer
+"
+" Netwr is okay for navigating the file system so I use it for it.
+" For interactive fs operations, I find netwr confusing so I use the terminal
+" instead.
+"
+" useful netrw commands:
+" - cycle between different layouts: i
+" - refresh view: <c-l>
+" - jump one directory up: -
+" - preview file: p
+" - close preview window <c-w>z
 Plug 'tpope/vim-vinegar'
 
 " tree sitter, useful for AST-based syntax highlighting

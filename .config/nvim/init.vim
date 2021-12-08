@@ -11,5 +11,33 @@ call plug#begin(stdpath('data') . '/plugged')
 " - press 'CTRL-^' to jump back to previous buffer
 Plug 'tpope/vim-vinegar'
 
+" tree sitter, useful for AST-based syntax highlighting
+" to install the JavaScript language, use ':TSInstall javascript'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Initialize plugin system
 call plug#end()
+
+
+" Use tree sitter for syntax highlighting
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+	highlight = {
+		enable = true,
+		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+		-- Using this option may slow down your editor, and you may see some duplicate highlights.
+		-- Instead of true it can also be a list of languages
+		additional_vim_regex_highlighting = false,
+	},
+}
+EOF
+
+" Use tree sitter for indentation when using the = command
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+	indent = {
+		enable = true
+	}
+}
+EOF

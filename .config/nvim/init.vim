@@ -83,3 +83,9 @@ set background=dark
 
 " make it easier to exit insert mode on the terminal
 :tnoremap <M-x> <C-\><C-n>
+
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END

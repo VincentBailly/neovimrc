@@ -78,3 +78,6 @@ set noautoindent
 set termguicolors
 colorscheme OceanicNext
 set background=dark
+
+" make it easier to exit insert mode on the terminal
+:tnoremap <M-x> <C-\><C-n>

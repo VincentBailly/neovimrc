@@ -73,6 +73,8 @@ set hidden
 " tools like prettier
 set nosmartindent
 set noautoindent
+set nocindent
+set indentexpr=
 
 " theme
 set termguicolors

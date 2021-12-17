@@ -32,6 +32,10 @@ Plug 'mhartington/oceanic-next'
 " LSP config
 Plug 'neovim/nvim-lspconfig'
 " Initialize plugin system
+
+" Snipets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 

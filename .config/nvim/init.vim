@@ -130,6 +130,13 @@ local on_attach = function(client, bufnr)
 
 end
 require'lspconfig'.tsserver.setup{
+  init_options = {
+    hostInfo = 'neovim',
+    maxTsServerMemory = 16000,
+    preferences = {
+      disableSuggestions = true
+    }
+  },
   on_attach = on_attach,
   flags = {
     debounce_text_changes = 150,

@@ -147,3 +147,9 @@ require'lspconfig'.tsserver.setup{
   }
 }
 EOF
+
+
+" make neovim used as git editor
+let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+" make git buffer deleted when hidden
+autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete

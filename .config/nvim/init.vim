@@ -56,9 +56,9 @@ EOF
 " Use tree sitter for indentation when using the = command
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-	indent = {
-		enable = true
-	}
+  indent = {
+  enable = true
+  }
 }
 EOF
 
@@ -82,6 +82,10 @@ set nosmartindent
 set noautoindent
 set nocindent
 set indentexpr=
+" treesitter is setting this so we need to remove it because it does not work
+" well and this is annoying
+autocmd BufEnter *.js set indentexpr= 
+autocmd BufEnter *.js set cindent
 
 " theme
 set termguicolors
